@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Farhath Fathima 🌷</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="passwordGate" class="password-gate">
+    <div class="password-card">
+      <div class="lock">🔐</div>
+      <p class="eyebrow">A LITTLE SECRET</p>
+      <h2>Just For You 🌷</h2>
+      <p>This little surprise is private.<br>Enter the password to continue.</p>
+      <input id="passwordInput" type="password" placeholder="Enter password" autocomplete="off">
+      <button id="unlockBtn" class="primary">OPEN THE SURPRISE ✨</button>
+      <p id="passwordError" class="password-error">That password isn't correct. Try again 💗</p>
+      <p class="password-hint">Hint: Teacher's Day + 2026</p>
+    </div>
+  </div>
+
+  <div class="petals" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="sparkles">✦　✧　✦</div>
+      <p class="eyebrow">A LITTLE SURPRISE AWAITS</p>
+      <h1>For Someone<br><em>Extra Special</em></h1>
+      <p class="sub">Some teachers teach lessons.<br>Some teachers become unforgettable memories.</p>
+
+      <div class="ribbon-wrap">
+        <div class="ribbon-text">🎀</div>
+        <button id="openBtn" class="primary">TAP TO OPEN ✨</button>
+      </div>
+      <p class="hint">A tiny surprise, made with lots of gratitude 💗</p>
+    </section>
+
+    <section class="reveal hidden" id="surprise">
+      <p class="eyebrow">5 SEPTEMBER • TEACHER'S DAY</p>
+      <h2>Happy <span>Teacher's Day</span></h2>
+      <p class="to">Dear <strong>Farhath Fathima Ma'am</strong> 🌷</p>
+      <p class="lead">
+        Even though I have finished my schooling, some teachers are never really left behind.
+        You are one of those teachers I will always remember with love, respect and gratitude.
+      </p>
+    </section>
+
+    <section class="letter-section">
+      <div class="section-label">A MESSAGE FROM THE HEART</div>
+      <h2>A Little Letter 💌</h2>
+
+      <div class="envelope" id="envelope" tabindex="0" role="button" aria-label="Open letter">
+        <div class="env-back"></div>
+        <div class="letter">
+          <p>Dear Ma'am,</p>
+          <p>
+            Thank you for being more than just a teacher. Even after finishing my schooling,
+            I still remember your words, your guidance and the way you inspired me.
+          </p>
+          <p>
+            You will always have a special place in my memories as one of my favourite and
+            most inspiring teachers. Time may take me away from the classroom, but it can
+            never take away the respect and gratitude I have for you.
+          </p>
+          <p>Thank you for making a difference in my life. 🌷</p>
+          <p class="sign">With love & gratitude,<br><strong>Anis Fathima</strong></p>
+        </div>
+        <div class="flap"></div>
+        <div class="seal">♥</div>
+      </div>
+      <p class="tap">TAP THE ENVELOPE TO OPEN</p>
+    </section>
+
+    <section class="memories">
+      <div class="section-label">LITTLE MEMORIES</div>
+      <h2>Moments To Remember 📸</h2>
+      <p class="center">Add your three favourite photos below. These will appear as your personal memory gallery.</p>
+      <div class="gallery">
+        <figure><img src="images/photo1.jpg" alt="Memory 1"><figcaption>A beautiful memory 🌷</figcaption></figure>
+        <figure><img src="images/photo2.jpg" alt="Memory 2"><figcaption>A moment to remember ✨</figcaption></figure>
+        <figure><img src="images/photo3.jpg" alt="Memory 3"><figcaption>Forever grateful 💗</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="big-heart">♡</div>
+      <p class="eyebrow">MORE THAN A TEACHER</p>
+      <h2>You Made A Difference.</h2>
+      <p>
+        Your lessons may have ended with the school bell,<br>
+        but the inspiration you gave me never will.
+      </p>
+      <div class="from">Made with love by <strong>Anis Fathima</strong> 🌸</div>
+    </section>
+  </main>
+
+  <button id="musicBtn" class="music" aria-label="Toggle music">🔇</button>
+  <audio id="music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>

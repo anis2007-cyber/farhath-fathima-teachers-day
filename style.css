@@ -1,0 +1,51 @@
+*{box-sizing:border-box}
+:root{--rose:#b85c78;--deep:#6f2d47;--cream:#fff8f2;--gold:#c99a5b;--ink:#402d35}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#fff9f5,#fff0f3 48%,#fffaf5);color:var(--ink);font-family:Montserrat,Arial,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(#c99a5b 1px,transparent 1px);background-size:34px 34px}
+main{overflow:hidden}.hero,.reveal,.letter-section,.memories,.final{max-width:980px;margin:auto;padding:90px 24px;text-align:center}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.sparkles{color:var(--gold);font-size:26px;margin-bottom:25px;animation:float 3s ease-in-out infinite}
+.eyebrow,.section-label{letter-spacing:4px;font-size:12px;font-weight:700;color:var(--rose)}
+h1,h2{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+h1{font-size:clamp(52px,10vw,100px);line-height:.95;margin:15px 0;color:var(--deep)}
+h1 em{color:var(--rose);font-style:italic}
+h2{font-size:clamp(42px,7vw,70px);line-height:1;margin:14px 0;color:var(--deep)}
+h2 span{display:block;color:var(--rose)}
+.sub,.lead,.center,.final p{line-height:1.9;font-size:15px;color:#765e66}
+.ribbon-wrap{margin-top:38px}
+.primary{border:0;border-radius:999px;background:var(--deep);color:#fff;padding:16px 30px;font:600 13px Montserrat;letter-spacing:1px;cursor:pointer;box-shadow:0 10px 25px #6f2d4730;transition:.25s}
+.primary:hover{transform:translateY(-3px);background:var(--rose)}
+.ribbon-text{font-size:52px;margin-bottom:15px;animation:pulse 1.8s infinite}
+.hint,.tap{font-size:11px;letter-spacing:2px;color:#9b7d85;margin-top:18px}
+.hidden{display:none}.reveal{animation:fadeUp .9s ease}.to{font-size:18px;margin:30px 0}.lead{max-width:700px;margin:0 auto;font-size:18px}
+.letter-section{padding-top:30px}.section-label{margin-bottom:15px}
+.envelope{width:min(470px,90vw);height:300px;margin:50px auto 22px;position:relative;cursor:pointer;perspective:1000px}
+.env-back{position:absolute;inset:0;background:#e7a7b8;border-radius:10px;box-shadow:0 18px 45px #7a3a5025}
+.letter{position:absolute;left:8%;right:8%;bottom:9%;height:86%;background:#fffdf9;padding:28px;text-align:left;border-radius:5px;z-index:1;box-shadow:0 5px 20px #5c293515;transition:transform .8s ease;overflow:auto;font-family:Georgia,serif;line-height:1.55;font-size:14px}
+.letter .sign{text-align:right;margin-top:15px}.flap{position:absolute;z-index:3;left:0;top:0;width:0;height:0;border-left:235px solid transparent;border-right:235px solid transparent;border-top:155px solid #d98ca2;transform-origin:top;transition:transform .8s ease}
+.seal{position:absolute;z-index:4;top:130px;left:50%;transform:translateX(-50%);width:45px;height:45px;border-radius:50%;background:var(--deep);color:#fff;display:grid;place-items:center;box-shadow:0 4px 12px #0002;transition:.4s}
+.envelope.open .flap{transform:rotateX(180deg)}.envelope.open .letter{transform:translateY(-150px);z-index:5}.envelope.open .seal{opacity:0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+figure{margin:0;background:#fff;padding:10px;border-radius:16px;box-shadow:0 10px 30px #6f2d4714;transform:rotate(-1deg);transition:.25s}
+figure:nth-child(2){transform:rotate(1deg)}figure:hover{transform:translateY(-7px) rotate(0)}
+figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:11px;background:#f2dce2}
+figcaption{font-family:Georgia,serif;padding:13px 5px 7px;color:#704b58}
+.final{padding-bottom:130px}.big-heart{font-size:72px;color:var(--rose);animation:pulse 2s infinite}.from{margin-top:35px;font-family:Georgia,serif;font-size:19px;color:var(--deep)}
+.music{position:fixed;right:18px;bottom:18px;width:50px;height:50px;border:0;border-radius:50%;background:#fff;color:var(--deep);box-shadow:0 8px 25px #5b263520;cursor:pointer;font-size:20px;z-index:20}
+@keyframes pulse{50%{transform:scale(1.08)}}@keyframes float{50%{transform:translateY(-8px)}}@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.hero,.reveal,.letter-section,.memories,.final{padding:75px 18px}.gallery{grid-template-columns:1fr}.flap{border-left-width:45vw;border-right-width:45vw;border-top-width:145px}.envelope{height:280px}.letter{font-size:13px;padding:20px}.envelope.open .letter{transform:translateY(-105px)}}
+
+/* Private password screen */
+.password-gate{position:fixed;inset:0;z-index:100;background:linear-gradient(180deg,#fff9f5,#fff0f3);display:grid;place-items:center;padding:22px}
+.password-card{width:min(430px,94vw);background:rgba(255,255,255,.94);border:1px solid #ead4da;border-radius:24px;padding:42px 26px;text-align:center;box-shadow:0 25px 70px #6f2d4720}
+.password-card .lock{font-size:48px;margin-bottom:10px}
+.password-card h2{font-size:44px;margin:8px 0 14px}
+.password-card>p:not(.eyebrow):not(.password-error):not(.password-hint){line-height:1.7;color:#765e66;font-size:14px}
+.password-card input{width:100%;margin:18px 0 10px;padding:15px 18px;border:1px solid #dfc2cb;border-radius:999px;outline:none;font:500 14px Montserrat;text-align:center;background:#fffaf8;color:#402d35}
+.password-card input:focus{border-color:#b85c78;box-shadow:0 0 0 4px #b85c7815}
+.password-card .primary{width:100%}
+.password-error{display:none;color:#b33e5e;font-size:12px;margin:12px 0 0}
+.password-hint{font-size:11px;color:#9b7d85;margin-top:18px;letter-spacing:1px}
+body.locked main,body.locked .music{visibility:hidden}
+@media(max-width:500px){.password-card{padding:34px 20px}.password-card h2{font-size:38px}}
