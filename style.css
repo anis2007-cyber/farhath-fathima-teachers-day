@@ -29,7 +29,7 @@ h2 span{display:block;color:var(--rose)}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
 figure{margin:0;background:#fff;padding:10px;border-radius:16px;box-shadow:0 10px 30px #6f2d4714;transform:rotate(-1deg);transition:.25s}
 figure:nth-child(2){transform:rotate(1deg)}figure:hover{transform:translateY(-7px) rotate(0)}
-figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:11px;background:#f2dce2}
+figure img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:11px;background:#f2dce2;display:block}
 figcaption{font-family:Georgia,serif;padding:13px 5px 7px;color:#704b58}
 .final{padding-bottom:130px}.big-heart{font-size:72px;color:var(--rose);animation:pulse 2s infinite}.from{margin-top:35px;font-family:Georgia,serif;font-size:19px;color:var(--deep)}
 .music{position:fixed;right:18px;bottom:18px;width:50px;height:50px;border:0;border-radius:50%;background:#fff;color:var(--deep);box-shadow:0 8px 25px #5b263520;cursor:pointer;font-size:20px;z-index:20}
